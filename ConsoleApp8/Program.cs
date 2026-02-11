@@ -16,8 +16,7 @@ battle.InitializeFactions(squadCount, fightersPerSquad);
 
 battle.ShowFactionsReport();
 
-bool exit = false;
- while (!exit)
+while (true)
 {
     Console.WriteLine("\n=== BATTLE MENU ===");
     Console.WriteLine("1. PvP Battle (1 vs 1)");
@@ -40,9 +39,8 @@ bool exit = false;
             Console.WriteLine("\nFaction War feature is coming in next stages!\n");
             break;
         case "0":
-            exit = true;
             Console.WriteLine("\nExiting...");
-            break;
+            return;
         default:
             Console.WriteLine("\nInvalid option. Please try again.\n");
             break;
